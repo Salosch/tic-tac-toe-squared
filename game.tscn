@@ -1,0 +1,170 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmahmxghpm47w"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_g1ie7"]
+[ext_resource type="PackedScene" uid="uid://dvlk7imglgpms" path="res://board/board.tscn" id="1_ym80r"]
+[ext_resource type="Texture2D" uid="uid://do2vfb2cj7fk" path="res://assets/sprites.png" id="3_0333r"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_g1ie7")
+
+[node name="Board1" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(349, 161)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board2" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(439, 161)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board3" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(529, 161)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board4" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(619, 161)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board5" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(709, 161)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board6" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(349, 248)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board7" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(439, 248)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board8" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(529, 248)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board9" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(619, 248)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board10" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(709, 248)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board11" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(349, 335)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board12" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(439, 335)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board13" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(529, 335)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board14" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(619, 335)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board15" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(709, 335)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board16" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(349, 423)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board17" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(439, 423)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board18" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(529, 423)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board19" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(619, 423)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board20" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(709, 423)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board21" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(349, 510)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board22" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(439, 510)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board23" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(529, 510)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board24" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(619, 510)
+scale = Vector2(0.28, 0.28)
+
+[node name="Board25" parent="." instance=ExtResource("1_ym80r")]
+position = Vector2(709, 510)
+scale = Vector2(0.28, 0.28)
+
+[node name="GUI" type="Node2D" parent="."]
+
+[node name="Title" type="Label" parent="GUI"]
+offset_left = 489.0
+offset_top = 37.0
+offset_right = 1454.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 32
+text = "Tic Tac Toe²"
+
+[node name="NextPlayer" type="Sprite2D" parent="GUI"]
+position = Vector2(525, 122)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_0333r")
+region_enabled = true
+region_rect = Rect2(0, 100, 100, 100)
+
+[node name="NextPlayerLabel" type="Label" parent="GUI"]
+offset_left = 452.0
+offset_top = 109.0
+offset_right = 494.0
+offset_bottom = 135.0
+size_flags_horizontal = 4
+text = "Next:"
+metadata/_edit_use_anchors_ = true
+
+[node name="WonPlayer" type="Sprite2D" parent="GUI"]
+visible = false
+position = Vector2(891, 58)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_0333r")
+region_enabled = true
+region_rect = Rect2(0, 100, 100, 100)
+
+[node name="RestartButton" type="Button" parent="GUI"]
+offset_left = 611.0
+offset_top = 107.0
+offset_right = 714.0
+offset_bottom = 138.0
+text = "Restart"
+metadata/_edit_use_anchors_ = true
+
+[node name="PopupPanel" type="PopupPanel" parent="GUI"]
+position = Vector2i(550, 300)
+size = Vector2i(150, 31)
+
+[node name="Label" type="Label" parent="GUI/PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 146.0
+offset_bottom = 27.0
+
+[node name="PopupItem" type="PopupPanel" parent="GUI"]
+
+[node name="Label" type="Label" parent="GUI/PopupItem"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 96.0
+offset_bottom = 96.0
+
+[connection signal="pressed" from="GUI/RestartButton" to="." method="_on_restart_button_pressed"]

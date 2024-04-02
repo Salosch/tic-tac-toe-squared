@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvlk7imglgpms"]
+
+[ext_resource type="Texture2D" uid="uid://do2vfb2cj7fk" path="res://assets/sprites.png" id="1_lagx3"]
+[ext_resource type="Script" path="res://board/board.gd" id="2_vjb6q"]
+[ext_resource type="Script" path="res://board/highlight.gd" id="3_m02pi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cta1l"]
+resource_name = "sprites"
+texture = ExtResource("1_lagx3")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/custom_data_0 = "Blue1"
+1:0/0 = 0
+1:0/0/custom_data_0 = "Blue2"
+2:0/0 = 0
+2:0/0/custom_data_0 = "Red1"
+3:0/0 = 0
+3:0/0/custom_data_0 = "Red2"
+0:1/0 = 0
+0:1/0/custom_data_0 = "Circle"
+1:1/0 = 0
+1:1/0/custom_data_0 = "Square"
+2:1/0 = 0
+2:1/0/custom_data_0 = "Triangle"
+3:1/0 = 0
+3:1/0/custom_data_0 = "Cross"
+0:2/0 = 0
+0:2/0/custom_data_0 = "Circle2"
+1:2/0 = 0
+1:2/0/custom_data_0 = "Square2"
+2:2/0 = 0
+2:2/0/custom_data_0 = "Triangle2"
+3:2/0 = 0
+3:2/0/custom_data_0 = "Cross2"
+0:3/0 = 0
+0:3/0/custom_data_0 = "D1"
+1:3/0 = 0
+1:3/0/custom_data_0 = "D2"
+2:3/0 = 0
+2:3/0/custom_data_0 = "D3"
+3:3/0 = 0
+3:3/0/custom_data_0 = "D4"
+0:4/0 = 0
+0:4/0/custom_data_0 = "White"
+1:4/0 = 0
+1:4/0/custom_data_0 = "D5"
+2:4/0 = 0
+2:4/0/custom_data_0 = "D6"
+3:4/0 = 0
+3:4/0/custom_data_0 = "Grey"
+
+[sub_resource type="TileSet" id="TileSet_exrha"]
+tile_size = Vector2i(100, 100)
+custom_data_layer_0/name = "Name"
+custom_data_layer_0/type = 4
+sources/1 = SubResource("TileSetAtlasSource_cta1l")
+
+[node name="Board" type="TileMap"]
+texture_filter = 1
+tile_set = SubResource("TileSet_exrha")
+rendering_quadrant_size = 100
+format = 2
+layer_0/name = "Board"
+layer_0/tile_data = PackedInt32Array(65537, 1, 0, 131073, 1, 0, 131074, 1, 0, 0, 1, 0, 65536, 1, 0, 131072, 1, 0, 1, 1, 0, 2, 1, 0, 65538, 1, 0)
+layer_1/name = "States"
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("2_vjb6q")
+
+[node name="Highlight" type="Node2D" parent="."]
+script = ExtResource("3_m02pi")
